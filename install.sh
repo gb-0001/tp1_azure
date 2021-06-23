@@ -109,6 +109,7 @@ if [ $(az vm list --query "[?name == $VMNAME] | length(@)") = 0 ]; then
 az vm create --resource-group $RESSOURCEGRPNAME \
   --name $VMNAME \
   --image UbuntuLTS \
+  --location $LOCATION \
 #  --custom-data cloud-init.sh \
   --admin-username azureuser \
   --generate-ssh-keys \
